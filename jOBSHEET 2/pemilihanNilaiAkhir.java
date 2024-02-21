@@ -18,7 +18,7 @@ public class pemilihanNilaiAkhir {
             valid = false;
         }
         tugas *= 0.2f;
-        System.out.print("Masukkan Niali Kuis : ");
+        System.out.print("Masukkan Nilai Kuis : ");
         kuis = sc.nextFloat();
         if (kuis > 100 || kuis < 0) {
             valid = false;
