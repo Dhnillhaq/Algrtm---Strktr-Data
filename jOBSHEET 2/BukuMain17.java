@@ -17,5 +17,8 @@ public class BukuMain17 {
         buk2.tampilInformasi();
         buk2.terjual(11);
         buk2.tampilInformasi();
+
+        Buku17 bukuDhanil = new Buku17("Tentang Dhanil", "Muhammad Dhia Ramadhanil Haq", 99, 1, 789000);
+        bukuDhanil.tampilInformasi();
     }
 }
