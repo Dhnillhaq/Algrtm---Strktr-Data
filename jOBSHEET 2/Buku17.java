@@ -12,7 +12,6 @@ public class Buku17 {
     void terjual(int jml){
         if (stok > 0) {
             stok -= jml;
-            System.out.println(stok);
         } else {
             System.out.println("Gabisa");
         }
@@ -22,6 +21,18 @@ public class Buku17 {
     }
     void gantiHarga(int hrg){
         harga = hrg;
+    }
+    
+    public Buku17(){
+        
+    }
+
+    public Buku17(String jud, String pg, int hal, int stok, int har){
+        judul = jud;
+        pengarang = pg;
+        halaman = hal;
+        this.stok = stok;
+        harga = har;
     }
 
 }
