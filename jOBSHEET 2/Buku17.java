@@ -1,6 +1,6 @@
 public class Buku17 {
     String judul, pengarang;
-    int halaman, stok, harga;
+    int halaman, stok, harga, htotal, jumlah;
 
     void tampilInformasi(){
         System.out.println("Judul: "+judul);
@@ -17,10 +17,23 @@ public class Buku17 {
         }
     }
     void restock(int jml){
+        jumlah = jml;
         stok += jml;
     }
     void gantiHarga(int hrg){
         harga = hrg;
+    }
+
+    void hitungHargaTotal(){
+        htotal = harga * jumlah;
+        System.out.println(htotal);
+    }
+
+    void hitungDiskon(){
+        
+    }
+    void hitungHargaBayar(){
+
     }
     
     public Buku17(){
