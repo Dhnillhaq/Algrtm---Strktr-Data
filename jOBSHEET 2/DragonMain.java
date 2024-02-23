@@ -6,17 +6,21 @@ public class DragonMain {
         start.width = 6;
         start.height = 6;
 
-        start.moveDown();
-        start.moveDown();
         start.moveRight();
+        start.printPosition();
         start.moveRight();
+        start.printPosition();
         start.moveRight();
+        start.printPosition();
         start.moveRight();
-
+        start.printPosition();
+        start.moveRight();
+        start.printPosition();
+        start.moveRight();
+        start.printPosition();
     
 
 
-        start.printPosition();
 
     }
     

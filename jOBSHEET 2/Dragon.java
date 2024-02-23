@@ -37,6 +37,7 @@ public class Dragon {
     void detectCollision(){
         System.out.println("GAME OVER!");
         System.out.println("YOU LOSE");
+        System.exit(0);
         
     }
     
