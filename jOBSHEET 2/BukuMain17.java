@@ -8,19 +8,28 @@ public class BukuMain17 {
         buk1.harga = 71000;
 
         Buku17 buk2 = new Buku17("Self Reward", "Maheera Ayesha", 160, 29, 59000);
-
-        buk1.tampilInformasi();
+        
         buk1.terjual(5);
-        // buk1.gantiHarga(60000);
+        buk1.gantiHarga(60000);
         buk1.tampilInformasi();
         buk1.hitungHargaTotal();
-
-        // buk2.tampilInformasi();
-        // buk2.terjual(11);
-        // buk2.tampilInformasi();
-
-        // Buku17 bukuDhanil = new Buku17("Tentang Dhanil", 
-        // "Muhammad Dhia Ramadhanil Haq", 99, 1, 789000);
-        // bukuDhanil.tampilInformasi();
+        buk1.hitungDiskon();
+        buk1.hitungHargaBayar();
+        
+        System.out.println("\n=================================");
+        System.out.println("=================================\n");
+        buk2.tampilInformasi();
+        buk2.terjual(11);
+        buk2.hitungHargaTotal();
+        buk1.hitungDiskon();
+        buk1.hitungHargaBayar();
+        
+        System.out.println("\n=================================");
+        System.out.println("=================================\n");
+        Buku17 bukuDhanil = new Buku17("Tentang Dhanil", 
+        "Muhammad Dhia Ramadhanil Haq", 99, 1, 789000);
+        bukuDhanil.tampilInformasi();
+        buk1.hitungDiskon();
+        buk1.hitungHargaBayar();
     }
 }
