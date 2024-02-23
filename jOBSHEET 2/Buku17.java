@@ -30,27 +30,27 @@ public class Buku17 {
 
     int hitungHargaTotal() {
         htotal = harga * jumlah;
-        System.out.println("Harga total-nya adalah: Rp."+htotal);
+        System.out.println("Harga total-nya adalah: Rp." + htotal);
         return htotal;
     }
 
     int hitungDiskon() {
         if (htotal > 150000) {
             diskon = htotal * 12 / 100;
-            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp."+diskon);
+            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp." + diskon);
         } else if (htotal > 75000 && htotal <= 150000) {
             diskon = htotal * 5 / 100;
-            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp."+diskon);
+            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp." + diskon);
         } else {
             diskon = htotal * 1;
-            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp."+diskon);
+            System.out.println("SELAMAT! anda mendapatkan diskon sebesar: Rp." + diskon);
         }
         return diskon;
     }
 
     int hitungHargaBayar() {
         hbayar = htotal - diskon;
-        System.out.println("Harga yang harus anda bayar adalah: Rp." +hbayar);
+        System.out.println("Harga yang harus anda bayar adalah: Rp." + hbayar);
         return hbayar;
     }
 
