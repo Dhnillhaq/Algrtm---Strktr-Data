@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class BRuangMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Kerucut[] kArray = new Kerucut[3];
-        LimasSegi4[] lArray = new LimasSegi4[3];
-        Bola[] bArray = new Bola[3];                       
+        Kerucut[] kArray = new Kerucut[2];
+        LimasSegi4[] lArray = new LimasSegi4[2];
+        Bola[] bArray = new Bola[2];                       
         
         // Looping untuk mengisi atribut Bola
         for (int i = 0; i < bArray.length; i++) {
