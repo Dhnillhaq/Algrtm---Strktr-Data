@@ -91,29 +91,44 @@ public class PencarianBuku17 {
     // return -1;
     // }
 
-    // Method Binary Search bertipe data String Kode Buku && Judul Buku
-    public int findBinarySearch(String cari, int left, int right) {
+    // Method Binary Search bertipe data String Judul Buku
+    public int findBinarySearchKB(String cari, int left, int right) {
+        if (left <= right) {
+            int mid = (left + right) / 2;
+            if (cari.equals(listBk[mid].kodeBuku)) {
+                return (mid);
+            } else if (listBk[mid].kodeBuku.compareTo(cari) > 0) {
+                return findBinarySearchKB(cari, left, mid - 1);
+            } else {
+                return findBinarySearchKB(cari, mid + 1, right);
+            }
+        }
+        return -1;
+    }
+
+    // Method Binary Search bertipe data String Judul Buku
+    public int findBinarySearchJudul(String cari, int left, int right) {
         int mid;
         int booksFound = 0;
         if (left <= right) {
             mid = (left + right) / 2;
-            if (listBk[mid].kodeBuku.equals(cari) || listBk[mid].judulBuku.equalsIgnoreCase(cari)) {
+            if (listBk[mid].judulBuku.equalsIgnoreCase(cari)) {
                 booksFound++;
                 if (mid >= 0 && mid < listBk.length - 1) {
-                    if (listBk[mid].judulBuku.equals(listBk[mid + 1].judulBuku) || listBk[mid].kodeBuku.equals(listBk[mid + 1].kodeBuku)) {
+                    if (listBk[mid].judulBuku.equals(listBk[mid + 1].judulBuku)) {
                         booksFound++;
                     }
                 } else if (mid > 0 && mid <= listBk.length - 1) {
-                    if (listBk[mid].judulBuku.equals(listBk[mid - 1].judulBuku) || listBk[mid].kodeBuku.equals(listBk[mid - 1].kodeBuku)) {
+                    if (listBk[mid].judulBuku.equals(listBk[mid - 1].judulBuku)) {
                         booksFound++;
                     }
                 }
-            } else if (listBk[mid].kodeBuku.compareTo(cari) > 0 || listBk[mid].judulBuku.compareTo(cari) > 0) {
+            } else if (listBk[mid].judulBuku.compareTo(cari) > 0) {
                 System.out.println("Kekiri");
-                return findBinarySearch(cari, left, mid - 1);
+                return findBinarySearchJudul(cari, left, mid - 1);
             } else {
                 System.out.println("Keknan");
-                return findBinarySearch(cari, mid + 1, right);
+                return findBinarySearchJudul(cari, mid + 1, right);
             }
         }
         if (booksFound > 1) {
@@ -121,14 +136,13 @@ public class PencarianBuku17 {
         } else if (booksFound == 1) {
             if (left <= right) {
                 mid = (left + right) / 2;
-                if (listBk[mid].kodeBuku.equals(cari) || listBk[mid].judulBuku.equalsIgnoreCase(cari)) {
+                if (listBk[mid].judulBuku.equalsIgnoreCase(cari)) {
                     return mid;
-                } else if (listBk[mid].kodeBuku.compareTo(cari) > 0 || listBk[mid].judulBuku.compareTo(cari) > 0) {
-                    return findBinarySearch(cari, left, mid - 1);
+                } else if (listBk[mid].judulBuku.compareTo(cari) > 0) {
+                    return findBinarySearchJudul(cari, left, mid - 1);
                 } else {
-                    return findBinarySearch(cari, mid + 1, right);
+                    return findBinarySearchJudul(cari, mid + 1, right);
                 }
-                
             }
         } else {
             return -1;
