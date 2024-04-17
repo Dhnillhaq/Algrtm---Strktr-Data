@@ -124,10 +124,8 @@ public class PencarianBuku17 {
                     }
                 }
             } else if (listBk[mid].judulBuku.compareTo(cari) > 0) {
-                System.out.println("Kekiri");
                 return findBinarySearchJudul(cari, left, mid - 1);
             } else {
-                System.out.println("Keknan");
                 return findBinarySearchJudul(cari, mid + 1, right);
             }
         }

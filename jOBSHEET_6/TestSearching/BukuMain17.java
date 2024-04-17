@@ -74,7 +74,6 @@ public class BukuMain17 {
                 break;
             case 2:
                 posisi = data.findBinarySearchJudul(cari, 0, jumlahBuku - 1);
-                System.out.println(posisi);
                 if (posisi == -1) {
                     System.out.println("Data tidak ditemukan");
                 } else if (posisi == -2) {
