@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Utama17 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        boolean test;
         System.out.println("Selamat Datang di Gudang 17!");
         System.out.print("Isi Batas kapasitas muatan tumpukan: ");
         int bnyk = sc.nextInt();
@@ -14,7 +15,9 @@ public class Utama17 {
             System.out.println("2. Ambil Barang");
             System.out.println("3. Tampilkan Tumpukan");
             System.out.println("4. Tampilkan Barang Teratas");
-            System.out.println("5. Keluar");
+            System.out.println("5. Tampilkan Barang Terbawah");
+            System.out.println("6. Cari Barang");
+            System.out.println("7. Keluar");
             System.out.print("Pilih operasi: ");
             int choice = sc.nextInt();
             sc.nextLine();
@@ -41,6 +44,14 @@ public class Utama17 {
                     gudang.lihatBarangTeratas();
                     break;
                 case 5:
+                    gudang.lihatBarangTerbawah();
+                    break;
+                case 6:
+                System.out.print("Masukkan kode barang yang ingin dicari: ");
+                int cari = sc.nextInt();
+                    System.out.println(gudang.cari(cari)); 
+                    break;
+                case 7:
                 
                     break Loop;
 
