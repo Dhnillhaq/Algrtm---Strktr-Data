@@ -41,7 +41,7 @@ public class DaftarMahasiswaBerprestasi {
             //swap
             Mahasiswa temp = listMhs[idxMin];
             listMhs[idxMin] = listMhs[i];
-            listMhs[i] = temp;
+            listMhs[i] = temp;  
         }
     }
 

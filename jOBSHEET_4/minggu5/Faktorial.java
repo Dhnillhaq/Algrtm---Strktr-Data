@@ -1,5 +1,9 @@
 public class Faktorial {
     public int nilai;
+
+    public Faktorial() {
+        
+    }
     int faktorialBF(int n){
         int faktor = 1;
         int i = 1;
