@@ -2,15 +2,15 @@ public class SLLMain {
     public static void main(String[] args) {
         SingleLinkedList singLL = new SingleLinkedList();
         singLL.print();
-        singLL.addFirst(890);
+        singLL.addFirst(890, "Dhanil");
         singLL.print();
-        singLL.addLast(760);
+        singLL.addLast(760, "Dhany");
         singLL.print();
-        singLL.addFirst(700);
+        singLL.addFirst(700, "Joko");
         singLL.print();
-        singLL.insertAfter(700, 999);
+        singLL.insertAfter(700, 999, "Yono");
         singLL.print();
-        singLL.insertAt(3, 833);
+        singLL.insertAt(3, 833, "Kukru");
         singLL.print();
         
         System.out.println("Data pada indeks ke-1="+singLL.getData(1));

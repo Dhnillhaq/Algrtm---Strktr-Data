@@ -11,7 +11,7 @@ public class SingleLinkedList {
             Node tmp = head;
             System.out.print("Isi Linked List : ");
             while (tmp != null) {
-                System.out.print(tmp.data + " \t");
+                System.out.println("NIM: "+tmp.NIM+"\tNama: "+tmp.Nama );
                 tmp = tmp.next;
             }
             System.out.println("");
@@ -20,8 +20,8 @@ public class SingleLinkedList {
         }
     }
 
-    void addFirst(int input) {
-        Node ndInput = new Node(input, null);
+    void addFirst(int input, String inputNama) {
+        Node ndInput = new Node(input, inputNama,  null);
         if (isEmpty()) {
             ndInput.next = head;
             head = ndInput;
@@ -32,8 +32,8 @@ public class SingleLinkedList {
         }
     }
 
-    void addLast(int input) {
-        Node ndInput = new Node(input, null);
+    void addLast(int input, String inputNama) {
+        Node ndInput = new Node(input, inputNama, null);
         if (isEmpty()) {
             tail.next = ndInput;
             tail = ndInput;
@@ -43,11 +43,11 @@ public class SingleLinkedList {
         }
     }
 
-    void insertAfter(int key, int input) {
-        Node ndInput = new Node(input, null);
+    void insertAfter(int key, int input, String inputNama) {
+        Node ndInput = new Node(input, inputNama, null);
         Node temp = head;
         do {
-            if (temp.data == key) {
+            if (temp.NIM == key) {
                 ndInput.next = temp.next;
                 temp.next = ndInput;
                 if (ndInput.next == null) {
@@ -59,19 +59,19 @@ public class SingleLinkedList {
         } while (temp != null);
     }
 
-    void insertAt(int index, int input) {
-        Node ndInput = new Node(input, null);
+    void insertAt(int index, int input, String inputNama) {
+        Node ndInput = new Node(input, inputNama, null);
         if (index > 0) {
             Node temp = head;
             for (int i = 0; i < index - 1; i++) {
                 temp = temp.next;
             }
-            temp.next = new Node(input, temp.next);
+            temp.next = new Node(input, inputNama, temp.next);
             if (temp.next.next == null) {
                 tail = temp.next;
             }
         } else if (index == 0) {
-            addFirst(input);
+            addFirst(input, inputNama);
         } else {
             System.out.println("index kaya gitu mau taro dimana bng");
         }
@@ -80,19 +80,19 @@ public class SingleLinkedList {
     int getData(int index) {
         Node temp = head;
         if (index == 0) {
-            return temp.data;
+            return temp.NIM;
         } else {
             for (int i = 0; i < index-1; i++) {
                 temp = temp.next;
             }
-            return temp.next.data;
+            return temp.next.NIM;
         }
     }
 
     int indexOf(int key) {
         Node temp = head;
         int index = 0;
-        while (temp != null && temp.data != key) {
+        while (temp != null && temp.NIM != key) {
             temp = temp.next;
             index++;
         }
@@ -134,10 +134,10 @@ public class SingleLinkedList {
         } else {
             Node temp = head;
             while (temp != null) {
-                if (temp.data == key && temp == head) {
+                if (temp.NIM == key && temp == head) {
                     removeFirst();
                     break;   
-                } else if (temp.next.data == key) {
+                } else if (temp.next.NIM == key) {
                     temp.next = temp.next.next;
                     if (temp.next == null) {
                         tail = temp;

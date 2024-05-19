@@ -1,10 +1,11 @@
 public class Node {
-
-    int data;
+    int NIM;
+    String Nama;
     Node next;
 
-    Node(int nilai, Node berikutnya) {
-        data = nilai;
+    Node(int nim,String nama, Node berikutnya) {
+        NIM = nim;
+        Nama = nama;
         next = berikutnya;
     }
 
