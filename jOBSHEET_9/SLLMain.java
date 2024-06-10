@@ -13,7 +13,7 @@ public class SLLMain {
         singLL.insertAt(3, 833, "Kukru");
         singLL.print();
         
-        System.out.println("Data pada indeks ke-1="+singLL.getData(1));
+        System.out.println("Data pada indeks ke-1="+singLL.getData(12));
         System.out.println("Data 833 berada pada indeks ke-"+singLL.indexOf(760));
         
         singLL.remove(999);
